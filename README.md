@@ -89,7 +89,7 @@ A comunicação entre os dispositivos é feita via rádio utilizando o micro:bit
 ![pista](WhatsApp Image 2026-04-27 at 21.12.29.jpeg)
 
 ### 🚗 Carrinho e luva
-![Carrinho](WhatsApp Image 2026-04-27 at 21.12.30.jpeg)
+<img width="480" height="640" alt="Image" src="https://github.com/user-attachments/assets/cfd8eaa2-2ba4-4fa0-aad1-0f0c38ef8d7f" />
 
 ---
 
