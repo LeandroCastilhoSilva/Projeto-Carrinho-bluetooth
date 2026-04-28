@@ -86,7 +86,7 @@ A comunicação entre os dispositivos é feita via rádio utilizando o micro:bit
 ## 📸 Demonstração do Projeto
 
 ### 📡 Grupo e pista
-![pista](WhatsApp Image 2026-04-27 at 21.12.29.jpeg)
+<img width="480" height="640" alt="Image" src="https://github.com/user-attachments/assets/005871fd-f8a0-4e37-8fdf-506a21886bf6" />
 
 ### 🚗 Carrinho e luva
 <img width="480" height="640" alt="Image" src="https://github.com/user-attachments/assets/cfd8eaa2-2ba4-4fa0-aad1-0f0c38ef8d7f" />
