@@ -1,0 +1,31 @@
+let  mEsq: number;
+let  mDir: number;
+
+radio.setGroup(340);
+
+radio.onReceivedValue(function (name: string, value: number){
+   if (name === "mDir"){
+    robotbit.MotorRunDual(robotbit.Motors.M1A, value, robotbit.Motors.M1B, value)
+   } else if (name === "mEsq"){
+    robotbit.MotorRunDual(robotbit.Motors.M2A, value, robotbit.Motors.M2B, value)
+   }
+
+})
+
+basic.forever(function (){
+        radio.sendValue("mDir", mDir)
+        radio.sendValue("mEsq", mEsq)
+        if (Math.abs(input.acceleration(Dimension.Y)) >= 2 * Math.abs(input.acceleration(Dimension.X))) {
+            mEsq = Math.map(input.acceleration(Dimension.Y), 1023, -1023, -255, 255);
+            mDir = mEsq;
+        } else if (Math.abs(input.acceleration(Dimension.X)) >= 2 * Math.abs(input.acceleration(Dimension.Y)) || input.acceleration(Dimension.Y) > 0) {
+            mEsq = Math.map(input.acceleration(Dimension.X), -1023, 1023, -255, 255);
+            mDir = mEsq * -1;
+        } else if (input.acceleration(Dimension.X) > 0) {
+            mEsq = Math.map(input.acceleration(Dimension.Y), 1023, -1023, -255, 255);
+            mDir = 0
+        } else if (input.acceleration(Dimension.X) < 0) {
+            mDir = Math.map(input.acceleration(Dimension.Y), 1023, -1023, -255, 255)
+        } else {
+        }
+})
